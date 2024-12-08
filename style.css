@@ -1,0 +1,82 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    background-color: #f0f0f0;
+    flex-direction: column;
+    align-items: center;
+}
+
+.container {
+    text-align: center;
+    width: 90%;
+    max-width: 1000px;
+}
+
+#gameContainer {
+    display: grid;
+    grid-template-columns: repeat(15, 1fr);
+    grid-template-rows: repeat(8, 1fr);
+    gap: 5px;
+    margin: 20px auto;
+    width: 100%;
+    max-width: 1000px;
+}
+
+.grid-item {
+    border: 1px solid #ddd;
+    padding: 10px; /* 減小內邊距 */
+    text-align: center;
+    cursor: pointer;
+    font-size: 14px; /* 減小字體大小 */
+    background-color: #f4f4f4;
+    transition: background-color 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 40px; /* 減小高度 */
+    width: 40px; /* 減小寬度 */
+}
+
+.grid-item:hover {
+    background-color: #ddd;
+}
+
+button {
+    margin: 5px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    display: inline-block;
+}
+
+#result {
+    font-size: 24px;
+    font-weight: bold;
+    color: green;
+    margin-top: 20px;
+}
+
+#drawCount {
+    margin-top: 10px;
+}
+
+#fireworksContainer {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.fireworks {
+    display: inline-block;
+    font-size: 50px;
+    animation: fireworksAnimation 3s linear infinite;
+}
+
+@keyframes fireworksAnimation {
+    0% { opacity: 1; transform: scale(1); }
+    100% { opacity: 0; transform: scale(1.5); }
+}
