@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>抽抽樂遊戲</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>抽抽樂遊戲</h1>
+        <div id="gameSetup">
+            <p>選擇抽數並開始遊戲：</p>
+            <button onclick="startGame(40)">40 抽</button>
+            <button onclick="startGame(60)">60 抽</button>
+            <button onclick="startGame(80)">80 抽</button>
+            <button onclick="startGame(120)">120 抽</button>
+            <button onclick="restartGame()">重新開始</button>
+        </div>
+        <div id="numberSetup" style="display: none;">
+            <p>選擇抽數: <span id="selectedDraws"></span></p>
+            <p>請輸入您想要的中獎號碼：</p>
+            <input type="number" id="targetNumberInput" min="1" placeholder="輸入號碼">
+            <button id="setNumberButton" onclick="setTargetNumber()">開始遊戲</button>
+            <p id="setupPrompt" style="color: red;"></p>
+            <button onclick="restartGame()">重新開始</button>
+        </div>
+        <div id="gameArea" style="display: none;">
+            <p>中獎號碼：<span id="targetNumberDisplay"></span></p>
+            <p>已抽洞數: <span id="drawCount">0</span></p>
+            <p>選擇一個洞並點擊，直到抽到目標數字！</p>
+            <div class="game-container" id="gameContainer"></div>
+            <p id="result"></p>
+            <button onclick="restartGame()">重新開始</button>
+        </div>
+        <div id="fireworksContainer"></div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
